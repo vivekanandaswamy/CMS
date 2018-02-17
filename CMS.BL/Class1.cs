@@ -8,5 +8,6 @@ namespace CMS.BL
 {
     public class Class1
     {
+
     }
 }
