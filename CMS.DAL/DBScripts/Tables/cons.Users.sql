@@ -18,7 +18,10 @@ CREATE TABLE [cons].[Users](
 	[uname] [varchar](20) NOT NULL,
 	[passwd] [varchar](30) NOT NULL,
 	[conpasswd] [varchar](30) NOT NULL,
-	[DateOfRegistration] [Date] NOT NULL
+	[DateOfRegistration] [Date] NOT NULL,
+	[Host] [varchar](30) NOT NULL,
+	[CreatedOn][Date] NOT NULL,
+	[UpdatedOn][Date] NOT NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[uid] ASC

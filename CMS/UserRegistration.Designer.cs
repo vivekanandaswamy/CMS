@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtfname = new System.Windows.Forms.TextBox();
             this.txtlname = new System.Windows.Forms.TextBox();
             this.txtuname = new System.Windows.Forms.TextBox();
@@ -43,6 +44,8 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.errProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // txtfname
@@ -51,6 +54,7 @@
             this.txtfname.Name = "txtfname";
             this.txtfname.Size = new System.Drawing.Size(294, 20);
             this.txtfname.TabIndex = 0;
+            this.txtfname.Validating += new System.ComponentModel.CancelEventHandler(this.txtfname_Validating);
             // 
             // txtlname
             // 
@@ -58,6 +62,7 @@
             this.txtlname.Name = "txtlname";
             this.txtlname.Size = new System.Drawing.Size(294, 20);
             this.txtlname.TabIndex = 1;
+            this.txtlname.Validating += new System.ComponentModel.CancelEventHandler(this.txtlname_Validating);
             // 
             // txtuname
             // 
@@ -65,6 +70,7 @@
             this.txtuname.Name = "txtuname";
             this.txtuname.Size = new System.Drawing.Size(294, 20);
             this.txtuname.TabIndex = 2;
+            this.txtuname.Validating += new System.ComponentModel.CancelEventHandler(this.txtuname_Validating);
             // 
             // txtPasswd
             // 
@@ -73,6 +79,7 @@
             this.txtPasswd.PasswordChar = '*';
             this.txtPasswd.Size = new System.Drawing.Size(294, 20);
             this.txtPasswd.TabIndex = 3;
+            this.txtPasswd.Validating += new System.ComponentModel.CancelEventHandler(this.txtPasswd_Validating);
             // 
             // txtConPasswd
             // 
@@ -81,6 +88,7 @@
             this.txtConPasswd.PasswordChar = '*';
             this.txtConPasswd.Size = new System.Drawing.Size(294, 20);
             this.txtConPasswd.TabIndex = 4;
+            this.txtConPasswd.Validating += new System.ComponentModel.CancelEventHandler(this.txtConPasswd_Validating);
             // 
             // dtPckr
             // 
@@ -181,6 +189,10 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "User Name :";
             // 
+            // errProvider
+            // 
+            this.errProvider.ContainerControl = this;
+            // 
             // UserRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,6 +215,7 @@
             this.Controls.Add(this.txtfname);
             this.Name = "UserRegistration";
             this.Text = "UserRegistration";
+            ((System.ComponentModel.ISupportInitialize)(this.errProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,5 +238,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ErrorProvider errProvider;
     }
 }

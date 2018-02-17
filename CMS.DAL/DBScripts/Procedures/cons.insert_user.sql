@@ -5,10 +5,11 @@ CREATE PROCEDURE cons.insert_user
 	@uname varchar(30),
 	@passwd varchar(30),
 	@conpasswd varchar(30),
-	@dor date
+	@dor date,
+	@host varchar(30)
 )
 AS
 BEGIN
-	INSERT INTO cons.Users(fname,lname,uname,passwd,conpasswd,DateOfRegistration)
-	VALUES (@fname,@lname,@uname,@passwd,@conpasswd,@dor)		
+	INSERT INTO cons.Users(fname,lname,uname,passwd,conpasswd,DateOfRegistration,Host,CreatedOn)
+	VALUES (@fname,@lname,@uname,@passwd,@conpasswd,@dor,@host,GETDATE())		
 END
