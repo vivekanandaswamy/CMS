@@ -43,8 +43,12 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="DBScripts\Tables\" />
+    <Content Include="DBScripts\Tables\cons.Material.sql" />
+    <Content Include="DBScripts\Tables\cons.MaterialDealers.sql" />
+    <Content Include="DBScripts\Tables\cons.Typeofmaterial.sql" />
+    <Content Include="DBScripts\Tables\cons.Users.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
