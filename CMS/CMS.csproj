@@ -93,6 +93,24 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CMS.BL\CMS.BL.csproj">
+      <Project>{671b8fa4-5793-4357-9a59-b34ad4f43435}</Project>
+      <Name>CMS.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMS.Common\CMS.Common.csproj">
+      <Project>{1f9d59a1-d89d-4f49-8c3b-67ded8150720}</Project>
+      <Name>CMS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMS.DAL\CMS.DAL.csproj">
+      <Project>{d3d34471-dbfa-4515-947c-7b63bbf8d2a3}</Project>
+      <Name>CMS.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMS.Logging\CMS.Logging.csproj">
+      <Project>{f1ca44b1-e9ce-46ef-a61d-f909c165e4bf}</Project>
+      <Name>CMS.Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

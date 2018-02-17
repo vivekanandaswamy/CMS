@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using CMS.Common.Interface;
 using System.Data.Common;
 using System.Configuration;
-
+using System.Data.SqlClient;
 namespace CMS.Common
 {
     public class DataAccessFactory<T> where T : DbConnection, new()
@@ -41,7 +41,8 @@ namespace CMS.Common
                     //_connection = "Driver={Amazon Redshift (x64)}; Server=hadv111.c8qg9vzfzs00.us-east-1.redshift.amazonaws.com; Database=padb; UID=ha_readonly; PWD=y863ENI74V; Port=5439; UseDeclareFetch=1; Fetch=10000";
                     break;
                 case ConnectionStringMode.SqlServerConnectionString:
-                    _connection = @"Data Source=DAL0IWRMBSQLP03;Initial Catalog=RMBS;User Id=RMBS_USER;Password=rmbs;MultipleActiveResultSets=True";
+                    //_connection = @"Data Source=DAL0IWRMBSQLP03;Initial Catalog=RMBS;User Id=RMBS_USER;Password=rmbs;MultipleActiveResultSets=True";
+                    _connection = @"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=ConstructionDB;Integrated Security=SSPI;";
                     //_connection = ConfigurationManager.ConnectionStrings["SqlServerConnectionString"].ToString();
                     break;
 

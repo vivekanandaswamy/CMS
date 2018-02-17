@@ -58,8 +58,7 @@ namespace CMS.Common
                 }
             }
             return cmd;
-        }       
-
+        }    
         #endregion
 
         #region ExecuteNonQuery Methods

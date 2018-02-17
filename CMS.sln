@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS.DAL", "CMS.DAL\CMS.DAL.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS.BL", "CMS.BL\CMS.BL.csproj", "{671B8FA4-5793-4357-9A59-B34AD4F43435}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS.Logging", "CMS.Logging\CMS.Logging.csproj", "{F1CA44B1-E9CE-46EF-A61D-F909C165E4BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{671B8FA4-5793-4357-9A59-B34AD4F43435}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{671B8FA4-5793-4357-9A59-B34AD4F43435}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{671B8FA4-5793-4357-9A59-B34AD4F43435}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1CA44B1-E9CE-46EF-A61D-F909C165E4BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1CA44B1-E9CE-46EF-A61D-F909C165E4BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1CA44B1-E9CE-46EF-A61D-F909C165E4BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1CA44B1-E9CE-46EF-A61D-F909C165E4BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

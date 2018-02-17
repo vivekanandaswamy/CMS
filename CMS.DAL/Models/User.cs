@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CMS.DAL
+namespace CMS.DAL.Models
 {
     public class User
     {
@@ -14,5 +14,6 @@ namespace CMS.DAL
         public string uname { get; set; }
         public string passwd { get; set; }
         public string conpasswd { get; set; }
+        public DateTime dor { get; set; }
     }
 }
