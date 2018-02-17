@@ -12,17 +12,27 @@ namespace CMS
 {
     public partial class Login : Form
     {
+        #region Properties/Objects
+        Tabs _tabs;
+        UserRegistration _userReg;
+        #endregion
         public Login()
         {
             InitializeComponent();
+            _tabs = new Tabs();
+            _userReg = new UserRegistration();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
             this.Hide();
-            Tabs t = new Tabs();
-            t.ShowDialog();
+            _tabs.ShowDialog();
+        }
+
+        private void btnSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            _userReg.ShowDialog();
         }
     }
 }

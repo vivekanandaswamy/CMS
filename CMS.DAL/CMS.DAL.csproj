@@ -40,10 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CMS.BL\CMS.BL.csproj">
+      <Project>{671b8fa4-5793-4357-9a59-b34ad4f43435}</Project>
+      <Name>CMS.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMS.Common\CMS.Common.csproj">
+      <Project>{1f9d59a1-d89d-4f49-8c3b-67ded8150720}</Project>
+      <Name>CMS.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="DBScripts\Tables\cons.Material.sql" />
     <Content Include="DBScripts\Tables\cons.MaterialDealers.sql" />
