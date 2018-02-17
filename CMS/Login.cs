@@ -20,6 +20,8 @@ namespace CMS
         ForgotPassword _fgtPasswd;
         UserBL _userBal;
         #endregion
+
+        #region Constructor
         public Login()
         {
             InitializeComponent();
@@ -29,14 +31,16 @@ namespace CMS
             _fgtPasswd = new ForgotPassword();
             _userBal = new UserBL();
         }
+        #endregion
 
+        #region Button Click Events
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
                 string username = txtUname.Text;
                 string passwd = txtpasswd.Text;
-                var result = _userBal.Login(username, passwd); 
+                var result = _userBal.Login(username, passwd);
                 if (result.HasRows)
                 {
                     string message = string.Format("Username: {0} Authenticated successfully!", username);
@@ -57,7 +61,7 @@ namespace CMS
                     DialogResult _confirmBox = MessageBox.Show(message, title, buttons);
                     if (_confirmBox == DialogResult.OK)
                     {
-                       // this.ShowDialog();
+                        // this.ShowDialog();
                     }
                 }
             }
@@ -77,6 +81,10 @@ namespace CMS
         {
             _chgPasswd.ShowDialog();
         }
+
+        #endregion
+
+        #region  Validations       
 
         private void txtUname_Validating(object sender, CancelEventArgs e)
         {
@@ -107,5 +115,6 @@ namespace CMS
                 errProvider.SetError(txtpasswd, "");
             }
         }
+        #endregion
     }
 }

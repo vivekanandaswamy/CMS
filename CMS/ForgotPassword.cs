@@ -13,13 +13,19 @@ namespace CMS
 {
     public partial class ForgotPassword : Form
     {
+        #region Properties
         UserBL _userRegistration = null;
+        #endregion
+
+        #region Constructor
         public ForgotPassword()
         {
             InitializeComponent();
             _userRegistration = new UserBL();
         }
+        #endregion
 
+        #region Button Click Events
         private void btnGetPassword_Click(object sender, EventArgs e)
         {
             if (ValidateChildren(ValidationConstraints.Enabled))
@@ -44,7 +50,9 @@ namespace CMS
                 }
             }
         }
+        #endregion
 
+        #region Validations
         private void txtuname_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtuname.Text))
@@ -59,5 +67,6 @@ namespace CMS
                 errProvider.SetError(txtuname, "");
             }
         }
+        #endregion
     }
 }

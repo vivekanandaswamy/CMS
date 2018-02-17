@@ -14,16 +14,21 @@ namespace CMS
 {
     public partial class ChangePassword : Form
     {
+        #region Properties
         UserBL _userRegistration = null;
         User _userDetails = null;
+        #endregion
+
+        #region Constructor
         public ChangePassword()
         {
             InitializeComponent();
             _userRegistration = new UserBL();
             _userDetails = new User();
         }
+        #endregion
 
-
+        #region Button Click Events
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (ValidateChildren(ValidationConstraints.Enabled))
@@ -32,7 +37,7 @@ namespace CMS
                 _userDetails.uname = txtuname.Text;
                 _userDetails.passwd = txtNewPasswd.Text;
                 _userDetails.conpasswd = txtConPasswd.Text;
-                int result = _userRegistration.ChangePassword(oldPasswd, _userDetails);
+                int result =  _userRegistration.ChangePassword(oldPasswd, _userDetails);
                 if (result > 0)
                 {
                     string message = string.Format("Username: {0} Password is changed successfully!", _userDetails.uname);
@@ -53,14 +58,18 @@ namespace CMS
         {
             ClearAll();
         }
+        #endregion
 
+        #region Private Methods
         private void ClearAll()
         {
             txtuname.Text = string.Empty;
             txtNewPasswd.Text = string.Empty;
             txtConPasswd.Text = string.Empty;
         }
+        #endregion
 
+        #region Validations
         private void txtuname_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtuname.Text))
@@ -126,5 +135,6 @@ namespace CMS
                 errProvider.SetError(txtConPasswd, "");
             }
         }
+        #endregion
     }
 }
