@@ -61,6 +61,10 @@
     <Content Include="DBScripts\Tables\cons.MaterialDealers.sql" />
     <Content Include="DBScripts\Tables\cons.Typeofmaterial.sql" />
     <Content Include="DBScripts\Tables\cons.Users.sql" />
+    <Content Include="DBScripts\Tables\hist.Users_Audit.sql" />
+    <Content Include="DBScripts\Triggers\cons.deleted_users_trigger.sql" />
+    <Content Include="DBScripts\Triggers\cons.insert_users_trigger.sql" />
+    <Content Include="DBScripts\Triggers\cons.update_users_trigger.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
