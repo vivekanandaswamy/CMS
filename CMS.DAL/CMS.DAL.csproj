@@ -57,8 +57,14 @@
     <Content Include="DBScripts\Procedures\cons.forgot_password.sql" />
     <Content Include="DBScripts\Procedures\cons.get_logindetails.sql" />
     <Content Include="DBScripts\Procedures\cons.insert_user.sql" />
+    <Content Include="DBScripts\Tables\cons.Actal_Labour_Cost.sql" />
+    <Content Include="DBScripts\Tables\cons.Actual_Material_Cost.sql" />
+    <Content Include="DBScripts\Tables\cons.Est_Labouor_Cost.sql" />
+    <Content Include="DBScripts\Tables\cons.Est_Material_Cost.sql" />
     <Content Include="DBScripts\Tables\cons.Material.sql" />
     <Content Include="DBScripts\Tables\cons.MaterialDealers.sql" />
+    <Content Include="DBScripts\Tables\cons.Persons_Details.sql" />
+    <Content Include="DBScripts\Tables\cons.Req_Persons.sql" />
     <Content Include="DBScripts\Tables\cons.Typeofmaterial.sql" />
     <Content Include="DBScripts\Tables\cons.Users.sql" />
     <Content Include="DBScripts\Tables\hist.Users_Audit.sql" />

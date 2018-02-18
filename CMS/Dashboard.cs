@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CMS
 {
-    public partial class Tabs : Form
+    public partial class Dashboard : Form
     {
-        public Tabs()
+        public Dashboard()
         {
             InitializeComponent();
         }
