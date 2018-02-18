@@ -47,7 +47,7 @@
             this.txtUname.Location = new System.Drawing.Point(250, 103);
             this.txtUname.Name = "txtUname";
             this.txtUname.Size = new System.Drawing.Size(129, 20);
-            this.txtUname.TabIndex = 0;
+            this.txtUname.TabIndex = 1;
             this.txtUname.Validating += new System.ComponentModel.CancelEventHandler(this.txtUname_Validating);
             // 
             // btnLogin
@@ -56,7 +56,7 @@
             this.btnLogin.Location = new System.Drawing.Point(250, 196);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(129, 31);
-            this.btnLogin.TabIndex = 1;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);

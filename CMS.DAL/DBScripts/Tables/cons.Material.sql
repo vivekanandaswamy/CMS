@@ -1,7 +1,7 @@
 USE [ConstructionDB]
 GO
 
-/****** Object:  Table [cons].[Material]    Script Date: 17-02-2018 07:47:04 ******/
+/****** Object:  Table [cons].[Material]    Script Date: 18-02-2018 15:32:53 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -14,11 +14,12 @@ GO
 CREATE TABLE [cons].[Material](
 	[mid] [int] IDENTITY(1,1) NOT NULL,
 	[mname] [varchar](500) NULL,
+	[comments] [varchar](max) NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[mid] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
 GO
 

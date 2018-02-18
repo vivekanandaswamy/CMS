@@ -41,7 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MaterialDAL.cs" />
+    <Compile Include="Models\LabourCost.cs" />
     <Compile Include="Models\Log.cs" />
+    <Compile Include="Models\Material.cs" />
+    <Compile Include="Models\MaterialCost.cs" />
+    <Compile Include="Models\MaterialDealers.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\PersonDetails.cs" />
+    <Compile Include="Models\TypeOfMaterial.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserDAL.cs" />
@@ -56,6 +64,9 @@
     <Content Include="DBScripts\Procedures\cons.change_password.sql" />
     <Content Include="DBScripts\Procedures\cons.forgot_password.sql" />
     <Content Include="DBScripts\Procedures\cons.get_logindetails.sql" />
+    <Content Include="DBScripts\Procedures\cons.insert_material.sql" />
+    <Content Include="DBScripts\Procedures\cons.insert_materialdealers.sql" />
+    <Content Include="DBScripts\Procedures\cons.insert_typeofmaterial.sql" />
     <Content Include="DBScripts\Procedures\cons.insert_user.sql" />
     <Content Include="DBScripts\Tables\cons.Actal_Labour_Cost.sql" />
     <Content Include="DBScripts\Tables\cons.Actual_Material_Cost.sql" />

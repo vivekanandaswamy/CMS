@@ -12,14 +12,18 @@ namespace CMS
 {
     public partial class Dashboard : Form
     {
+        #region Properties
+        Material _material = null;
+        #endregion
         public Dashboard()
         {
             InitializeComponent();
+            _material = new Material();
         }
 
         private void btnMaterial_Click(object sender, EventArgs e)
         {
-
+            _material.ShowDialog();
         }
 
         private void btnMaterialDealers_Click(object sender, EventArgs e)
