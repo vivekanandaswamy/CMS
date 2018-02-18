@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DBScripts\Procedures\cons.change_password.sql" />
+    <Content Include="DBScripts\Procedures\cons.fetch_material.sql" />
     <Content Include="DBScripts\Procedures\cons.forgot_password.sql" />
     <Content Include="DBScripts\Procedures\cons.get_logindetails.sql" />
     <Content Include="DBScripts\Procedures\cons.insert_material.sql" />

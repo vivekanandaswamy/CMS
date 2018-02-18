@@ -1,6 +1,6 @@
 ﻿namespace CMS
 {
-    partial class Material
+    partial class MaterialReg
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblMaterial = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.lblmname = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtmname = new System.Windows.Forms.TextBox();
+            this.txtComments = new System.Windows.Forms.TextBox();
             this.lblComments = new System.Windows.Forms.Label();
+            this.errProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMaterial
@@ -68,21 +71,22 @@
             this.lblmname.TabIndex = 2;
             this.lblmname.Text = "Name :";
             // 
-            // textBox1
+            // txtmname
             // 
-            this.textBox1.Location = new System.Drawing.Point(195, 84);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtmname.Location = new System.Drawing.Point(195, 84);
+            this.txtmname.Name = "txtmname";
+            this.txtmname.Size = new System.Drawing.Size(213, 20);
+            this.txtmname.TabIndex = 3;
+            this.txtmname.Validating += new System.ComponentModel.CancelEventHandler(this.txtmname_Validating);
             // 
-            // textBox2
+            // txtComments
             // 
-            this.textBox2.Location = new System.Drawing.Point(195, 125);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(213, 103);
-            this.textBox2.TabIndex = 4;
+            this.txtComments.Location = new System.Drawing.Point(195, 125);
+            this.txtComments.Multiline = true;
+            this.txtComments.Name = "txtComments";
+            this.txtComments.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtComments.Size = new System.Drawing.Size(213, 103);
+            this.txtComments.TabIndex = 4;
             // 
             // lblComments
             // 
@@ -94,19 +98,24 @@
             this.lblComments.TabIndex = 5;
             this.lblComments.Text = "Comments :";
             // 
-            // Material
+            // errProvider
+            // 
+            this.errProvider.ContainerControl = this;
+            // 
+            // MaterialReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(486, 318);
             this.Controls.Add(this.lblComments);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtComments);
+            this.Controls.Add(this.txtmname);
             this.Controls.Add(this.lblmname);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblMaterial);
-            this.Name = "Material";
+            this.Name = "MaterialReg";
             this.Text = "Material";
+            ((System.ComponentModel.ISupportInitialize)(this.errProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,8 +126,9 @@
         private System.Windows.Forms.Label lblMaterial;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label lblmname;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtmname;
+        private System.Windows.Forms.TextBox txtComments;
         private System.Windows.Forms.Label lblComments;
+        private System.Windows.Forms.ErrorProvider errProvider;
     }
 }

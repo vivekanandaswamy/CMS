@@ -211,6 +211,6 @@
         private System.Windows.Forms.Button btnEstLabourCost;
         private System.Windows.Forms.Button btnActualLabourCost;
         private System.Windows.Forms.Label lblDataInput;
-        private System.Windows.Forms.Label lblReports;
+        private System.Windows.Forms.Label lblReports;       
     }
 }

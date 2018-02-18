@@ -46,6 +46,8 @@ namespace CMS.Common
         public DbCommand CreateCommand(T t, string query, CommandType cmdType, IEnumerable<KeyValuePair<string, object>> parameters)
         {
             var cmd = t.CreateCommand();
+            if (cmd.Connection.State == ConnectionState.Open)
+                t.Close();
             cmd.Connection.ConnectionString = connString;
             cmd.CommandText = query;
             cmd.CommandType = cmdType;
@@ -58,13 +60,13 @@ namespace CMS.Common
                 }
             }
             return cmd;
-        }    
+        }
         #endregion
 
         #region ExecuteNonQuery Methods
 
         public int ExecuteNonQuery(T t, string query, CommandType cmdType, IEnumerable<KeyValuePair<string, object>> parameters)
-        {           
+        {
             var cmd = CreateCommand(t, query, cmdType, parameters);
             if (cmd.Connection.State != ConnectionState.Open)
                 cmd.Connection.Open();
@@ -72,7 +74,7 @@ namespace CMS.Common
         }
 
         public async Task<int> ExecuteNonQueryAsync(T t, string query, CommandType cmdType, IEnumerable<KeyValuePair<string, object>> parameters, CancellationToken cncTkn = default(CancellationToken))
-        {           
+        {
             var cmd = CreateCommand(t, query, cmdType, parameters);
             if (cmd.Connection.State != ConnectionState.Open)
                 cmd.Connection.Open();
@@ -82,7 +84,7 @@ namespace CMS.Common
 
         #region ExecuteReader Methods
         public DbDataReader ExecuteReader(T t, string query, CommandType cmdType, IEnumerable<KeyValuePair<string, object>> parameters)
-        {            
+        {
             var cmd = CreateCommand(t, query, cmdType, parameters);
             if (cmd.Connection.State != ConnectionState.Open)
                 cmd.Connection.Open();
@@ -90,7 +92,7 @@ namespace CMS.Common
         }
 
         public async Task<DbDataReader> ExecuteReaderAsync(T t, string query, CommandType cmdType, IEnumerable<KeyValuePair<string, object>> parameters)
-        {           
+        {
             var cmd = CreateCommand(t, query, cmdType, parameters);
             if (cmd.Connection.State != ConnectionState.Open)
                 await cmd.Connection.OpenAsync();
@@ -101,7 +103,7 @@ namespace CMS.Common
 
         #region ExecuteScalar Methods
         public void ExecuteScalar(T t, string query, CommandType cmdType, IEnumerable<KeyValuePair<string, object>> parameters)
-        {            
+        {
             var cmd = CreateCommand(t, query, cmdType, parameters);
             if (cmd.Connection.State != ConnectionState.Open)
                 cmd.Connection.Open();
@@ -109,7 +111,7 @@ namespace CMS.Common
         }
 
         public async Task ExecuteScalarAsync(T t, string query, CommandType cmdType, IEnumerable<KeyValuePair<string, object>> parameters, CancellationToken cncTkn = default(CancellationToken))
-        {            
+        {
             var cmd = CreateCommand(t, query, cmdType, parameters);
             if (cmd.Connection.State != ConnectionState.Open)
                 cmd.Connection.Open();

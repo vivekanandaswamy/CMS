@@ -13,12 +13,14 @@ namespace CMS
     public partial class Dashboard : Form
     {
         #region Properties
-        Material _material = null;
+        MaterialReg _material = null;
+        TypeOfMaterialReg _typeofMaterial = null;
         #endregion
         public Dashboard()
         {
             InitializeComponent();
-            _material = new Material();
+            _material = new MaterialReg();
+            _typeofMaterial = new TypeOfMaterialReg();
         }
 
         private void btnMaterial_Click(object sender, EventArgs e)
@@ -33,7 +35,7 @@ namespace CMS
 
         private void btnTypeOfMaterials_Click(object sender, EventArgs e)
         {
-
+            _typeofMaterial.ShowDialog();
         }
 
         private void btnEstMaterialCost_Click(object sender, EventArgs e)

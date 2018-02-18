@@ -69,14 +69,20 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Material.cs">
+    <Compile Include="MaterialReg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Material.Designer.cs">
-      <DependentUpon>Material.cs</DependentUpon>
+    <Compile Include="MaterialReg.Designer.cs">
+      <DependentUpon>MaterialReg.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TypeOfMaterialReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TypeOfMaterialReg.Designer.cs">
+      <DependentUpon>TypeOfMaterialReg.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,8 +101,8 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Material.resx">
-      <DependentUpon>Material.cs</DependentUpon>
+    <EmbeddedResource Include="MaterialReg.resx">
+      <DependentUpon>MaterialReg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,6 +113,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TypeOfMaterialReg.resx">
+      <DependentUpon>TypeOfMaterialReg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserRegistration.resx">
       <DependentUpon>UserRegistration.cs</DependentUpon>
     </EmbeddedResource>

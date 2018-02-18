@@ -21,18 +21,33 @@ namespace CMS.DAL
             _conn = conn;
             _db = DataAccessFactory<SqlConnection>.CreateInstance(DataType.SqlServer);
         }
-        public int InsertMaterial(User _userDetails)
+        public int InsertMaterial(Material _material)
         {
             var parameters = new List<KeyValuePair<string, object>>(){
-                new KeyValuePair<string,object>("fname",_userDetails.fname),
-                new KeyValuePair<string,object>("lname",_userDetails.lname),
-                new KeyValuePair<string,object>("uname",_userDetails.uname),
-                new KeyValuePair<string,object>("passwd",_userDetails.passwd),
-                new KeyValuePair<string,object>("conpasswd",_userDetails.conpasswd),
-                new KeyValuePair<string,object>("dor",_userDetails.dor),
-                 new KeyValuePair<string,object>("@host",System.Environment.MachineName.ToString()),
+                new KeyValuePair<string,object>("name",_material.mnane),
+                new KeyValuePair<string,object>("comments",_material.comments),
             };
-            return _db.ExecuteNonQuery(_conn, "cons.insert_user", CommandType.StoredProcedure, parameters.AsEnumerable());
+            return _db.ExecuteNonQuery(_conn, "cons.insert_material", CommandType.StoredProcedure, parameters.AsEnumerable());
+        }
+        public int InsertMaterialDealers(MaterialDealers _materialDealers)
+        {
+            var parameters = new List<KeyValuePair<string, object>>(){
+                new KeyValuePair<string,object>("typeOfMaterialId",_materialDealers.tmid),
+                new KeyValuePair<string,object>("mname",_materialDealers.name),
+                new KeyValuePair<string,object>("address",_materialDealers.address),
+                new KeyValuePair<string,object>("mobnum",_materialDealers.mobile),
+                new KeyValuePair<string,object>("comments",_materialDealers.comments),
+            };
+            return _db.ExecuteNonQuery(_conn, "cons.insert_materialdealers", CommandType.StoredProcedure, parameters.AsEnumerable());
+        }
+        public int InsertTypeofMaterial(TypeOfMaterial _typeofmaterial)
+        {
+            var parameters = new List<KeyValuePair<string, object>>(){
+                new KeyValuePair<string,object>("mid",_typeofmaterial.mid),
+                new KeyValuePair<string,object>("tmname",_typeofmaterial.tmname),                
+                new KeyValuePair<string,object>("comments",_typeofmaterial.comments),
+            };
+            return _db.ExecuteNonQuery(_conn, "cons.insert_typeofmaterial", CommandType.StoredProcedure, parameters.AsEnumerable());
         }
     }
 }

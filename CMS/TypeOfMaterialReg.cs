@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CMS
 {
-    public partial class Material : Form
+    public partial class TypeOfMaterialReg : Form
     {
-        public Material()
+        public TypeOfMaterialReg()
         {
             InitializeComponent();
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
