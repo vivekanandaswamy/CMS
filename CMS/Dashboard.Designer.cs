@@ -29,12 +29,17 @@
         private void InitializeComponent()
         {
             this.lblDashBoard = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnMaterial = new System.Windows.Forms.Button();
+            this.btnMaterialDealers = new System.Windows.Forms.Button();
+            this.btnTypeOfMaterials = new System.Windows.Forms.Button();
+            this.btnEstMaterialCost = new System.Windows.Forms.Button();
+            this.btnActualMaterialCost = new System.Windows.Forms.Button();
+            this.btnRequiredPersons = new System.Windows.Forms.Button();
+            this.btnPersonDetails = new System.Windows.Forms.Button();
+            this.btnEstLabourCost = new System.Windows.Forms.Button();
+            this.btnActualLabourCost = new System.Windows.Forms.Button();
+            this.lblDataInput = new System.Windows.Forms.Label();
+            this.lblReports = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblDashBoard
@@ -42,77 +47,149 @@
             this.lblDashBoard.AutoSize = true;
             this.lblDashBoard.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDashBoard.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblDashBoard.Location = new System.Drawing.Point(635, 52);
+            this.lblDashBoard.Location = new System.Drawing.Point(637, 29);
             this.lblDashBoard.Name = "lblDashBoard";
             this.lblDashBoard.Size = new System.Drawing.Size(196, 31);
             this.lblDashBoard.TabIndex = 0;
             this.lblDashBoard.Text = "DASHBOARD";
             // 
-            // button1
+            // btnMaterial
             // 
-            this.button1.Location = new System.Drawing.Point(69, 164);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 66);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaterial.Location = new System.Drawing.Point(52, 209);
+            this.btnMaterial.Name = "btnMaterial";
+            this.btnMaterial.Size = new System.Drawing.Size(172, 37);
+            this.btnMaterial.TabIndex = 1;
+            this.btnMaterial.Text = "Required Material";
+            this.btnMaterial.UseVisualStyleBackColor = true;
+            this.btnMaterial.Click += new System.EventHandler(this.btnMaterial_Click);
             // 
-            // button2
+            // btnMaterialDealers
             // 
-            this.button2.Location = new System.Drawing.Point(288, 164);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 66);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnMaterialDealers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaterialDealers.Location = new System.Drawing.Point(52, 287);
+            this.btnMaterialDealers.Name = "btnMaterialDealers";
+            this.btnMaterialDealers.Size = new System.Drawing.Size(172, 38);
+            this.btnMaterialDealers.TabIndex = 2;
+            this.btnMaterialDealers.Text = "Material Dealers";
+            this.btnMaterialDealers.UseVisualStyleBackColor = true;
+            this.btnMaterialDealers.Click += new System.EventHandler(this.btnMaterialDealers_Click);
             // 
-            // button3
+            // btnTypeOfMaterials
             // 
-            this.button3.Location = new System.Drawing.Point(523, 164);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(165, 66);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnTypeOfMaterials.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTypeOfMaterials.Location = new System.Drawing.Point(52, 367);
+            this.btnTypeOfMaterials.Name = "btnTypeOfMaterials";
+            this.btnTypeOfMaterials.Size = new System.Drawing.Size(172, 40);
+            this.btnTypeOfMaterials.TabIndex = 3;
+            this.btnTypeOfMaterials.Text = "Type Of Materials";
+            this.btnTypeOfMaterials.UseVisualStyleBackColor = true;
+            this.btnTypeOfMaterials.Click += new System.EventHandler(this.btnTypeOfMaterials_Click);
             // 
-            // button4
+            // btnEstMaterialCost
             // 
-            this.button4.Location = new System.Drawing.Point(753, 164);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(146, 66);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnEstMaterialCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstMaterialCost.Location = new System.Drawing.Point(52, 444);
+            this.btnEstMaterialCost.Name = "btnEstMaterialCost";
+            this.btnEstMaterialCost.Size = new System.Drawing.Size(172, 38);
+            this.btnEstMaterialCost.TabIndex = 4;
+            this.btnEstMaterialCost.Text = "Estimated Material Cost";
+            this.btnEstMaterialCost.UseVisualStyleBackColor = true;
+            this.btnEstMaterialCost.Click += new System.EventHandler(this.btnEstMaterialCost_Click);
             // 
-            // button5
+            // btnActualMaterialCost
             // 
-            this.button5.Location = new System.Drawing.Point(968, 164);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(145, 66);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnActualMaterialCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualMaterialCost.Location = new System.Drawing.Point(52, 527);
+            this.btnActualMaterialCost.Name = "btnActualMaterialCost";
+            this.btnActualMaterialCost.Size = new System.Drawing.Size(172, 42);
+            this.btnActualMaterialCost.TabIndex = 5;
+            this.btnActualMaterialCost.Text = "Actual Material Cost";
+            this.btnActualMaterialCost.UseVisualStyleBackColor = true;
+            this.btnActualMaterialCost.Click += new System.EventHandler(this.btnActualMaterialCost_Click);
             // 
-            // button6
+            // btnRequiredPersons
             // 
-            this.button6.Location = new System.Drawing.Point(1195, 164);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(165, 66);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnRequiredPersons.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRequiredPersons.Location = new System.Drawing.Point(348, 209);
+            this.btnRequiredPersons.Name = "btnRequiredPersons";
+            this.btnRequiredPersons.Size = new System.Drawing.Size(160, 37);
+            this.btnRequiredPersons.TabIndex = 6;
+            this.btnRequiredPersons.Text = "Required Persons";
+            this.btnRequiredPersons.UseVisualStyleBackColor = true;
+            this.btnRequiredPersons.Click += new System.EventHandler(this.btnRequiredPersons_Click);
+            // 
+            // btnPersonDetails
+            // 
+            this.btnPersonDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonDetails.Location = new System.Drawing.Point(348, 287);
+            this.btnPersonDetails.Name = "btnPersonDetails";
+            this.btnPersonDetails.Size = new System.Drawing.Size(160, 38);
+            this.btnPersonDetails.TabIndex = 7;
+            this.btnPersonDetails.Text = "Person Details";
+            this.btnPersonDetails.UseVisualStyleBackColor = true;
+            this.btnPersonDetails.Click += new System.EventHandler(this.btnPersonDetails_Click);
+            // 
+            // btnEstLabourCost
+            // 
+            this.btnEstLabourCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstLabourCost.Location = new System.Drawing.Point(348, 367);
+            this.btnEstLabourCost.Name = "btnEstLabourCost";
+            this.btnEstLabourCost.Size = new System.Drawing.Size(160, 40);
+            this.btnEstLabourCost.TabIndex = 8;
+            this.btnEstLabourCost.Text = "Estimated Labour Cost";
+            this.btnEstLabourCost.UseVisualStyleBackColor = true;
+            this.btnEstLabourCost.Click += new System.EventHandler(this.btnEstLabourCost_Click);
+            // 
+            // btnActualLabourCost
+            // 
+            this.btnActualLabourCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualLabourCost.Location = new System.Drawing.Point(348, 444);
+            this.btnActualLabourCost.Name = "btnActualLabourCost";
+            this.btnActualLabourCost.Size = new System.Drawing.Size(160, 38);
+            this.btnActualLabourCost.TabIndex = 9;
+            this.btnActualLabourCost.Text = "Actual Labour Cost";
+            this.btnActualLabourCost.UseVisualStyleBackColor = true;
+            this.btnActualLabourCost.Click += new System.EventHandler(this.btnActualLabourCost_Click);
+            // 
+            // lblDataInput
+            // 
+            this.lblDataInput.AutoSize = true;
+            this.lblDataInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataInput.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblDataInput.Location = new System.Drawing.Point(218, 108);
+            this.lblDataInput.Name = "lblDataInput";
+            this.lblDataInput.Size = new System.Drawing.Size(141, 25);
+            this.lblDataInput.TabIndex = 10;
+            this.lblDataInput.Text = "DATA INPUT";
+            // 
+            // lblReports
+            // 
+            this.lblReports.AutoSize = true;
+            this.lblReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReports.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblReports.Location = new System.Drawing.Point(982, 108);
+            this.lblReports.Name = "lblReports";
+            this.lblReports.Size = new System.Drawing.Size(208, 25);
+            this.lblReports.TabIndex = 11;
+            this.lblReports.Text = "REPORT SCREENS";
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1488, 642);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblReports);
+            this.Controls.Add(this.lblDataInput);
+            this.Controls.Add(this.btnActualLabourCost);
+            this.Controls.Add(this.btnEstLabourCost);
+            this.Controls.Add(this.btnPersonDetails);
+            this.Controls.Add(this.btnRequiredPersons);
+            this.Controls.Add(this.btnActualMaterialCost);
+            this.Controls.Add(this.btnEstMaterialCost);
+            this.Controls.Add(this.btnTypeOfMaterials);
+            this.Controls.Add(this.btnMaterialDealers);
+            this.Controls.Add(this.btnMaterial);
             this.Controls.Add(this.lblDashBoard);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
@@ -124,11 +201,16 @@
         #endregion
 
         private System.Windows.Forms.Label lblDashBoard;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnMaterial;
+        private System.Windows.Forms.Button btnMaterialDealers;
+        private System.Windows.Forms.Button btnTypeOfMaterials;
+        private System.Windows.Forms.Button btnEstMaterialCost;
+        private System.Windows.Forms.Button btnActualMaterialCost;
+        private System.Windows.Forms.Button btnRequiredPersons;
+        private System.Windows.Forms.Button btnPersonDetails;
+        private System.Windows.Forms.Button btnEstLabourCost;
+        private System.Windows.Forms.Button btnActualLabourCost;
+        private System.Windows.Forms.Label lblDataInput;
+        private System.Windows.Forms.Label lblReports;
     }
 }

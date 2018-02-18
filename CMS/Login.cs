@@ -14,7 +14,7 @@ namespace CMS
     public partial class Login : Form
     {
         #region Properties/Objects
-        Tabs _tabs;
+        Dashboard _dashboard;
         UserRegistration _userReg;
         ChangePassword _chgPasswd;
         ForgotPassword _fgtPasswd;
@@ -25,7 +25,7 @@ namespace CMS
         public Login()
         {
             InitializeComponent();
-            _tabs = new Tabs();
+            _dashboard = new Dashboard();
             _userReg = new UserRegistration();
             _chgPasswd = new ChangePassword();
             _fgtPasswd = new ForgotPassword();
@@ -50,7 +50,7 @@ namespace CMS
                     if (_confirmBox == DialogResult.OK)
                     {
                         this.Hide();
-                        _tabs.ShowDialog();
+                        _dashboard.ShowDialog();
                     }
                 }
                 else
