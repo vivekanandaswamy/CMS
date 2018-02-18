@@ -7,14 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using CMS.DAL.Models;
+using CMS.BL;
+using CMS.DAL;
 namespace CMS
 {
     public partial class TypeOfMaterialReg : Form
     {
+        MaterialBL _materialBL;
         public TypeOfMaterialReg()
         {
             InitializeComponent();
+            _materialBL = new MaterialBL();
+            LoadMaterials();
+        }
+        private void LoadMaterials()
+        {
+            DataTable dt = _materialBL.FetchMaterial();            
+            cmBoxMaterial.ValueMember = "mid";
+            cmBoxMaterial.DisplayMember = "mname";
+            cmBoxMaterial.Items.Add("--Select--");
+            cmBoxMaterial.DataSource = dt;
+
         }
     }
 }

@@ -7,6 +7,7 @@ using CMS.DAL;
 using CMS.DAL.Models;
 using System.Data.SqlClient;
 using System.Data.Common;
+using System.Data;
 
 namespace CMS.BL
 {
@@ -29,6 +30,10 @@ namespace CMS.BL
         public int InsertTypeofMaterial(TypeOfMaterial _typeofmaterial)
         {
             return _materialDAL.InsertTypeofMaterial(_typeofmaterial);
+        }
+        public DataTable FetchMaterial()
+        {
+            return _materialDAL.FetchMaterial();
         }
     }
 }

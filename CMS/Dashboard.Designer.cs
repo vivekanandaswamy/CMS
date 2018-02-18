@@ -67,7 +67,7 @@
             // btnMaterialDealers
             // 
             this.btnMaterialDealers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaterialDealers.Location = new System.Drawing.Point(52, 287);
+            this.btnMaterialDealers.Location = new System.Drawing.Point(52, 367);
             this.btnMaterialDealers.Name = "btnMaterialDealers";
             this.btnMaterialDealers.Size = new System.Drawing.Size(172, 38);
             this.btnMaterialDealers.TabIndex = 2;
@@ -78,7 +78,7 @@
             // btnTypeOfMaterials
             // 
             this.btnTypeOfMaterials.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTypeOfMaterials.Location = new System.Drawing.Point(52, 367);
+            this.btnTypeOfMaterials.Location = new System.Drawing.Point(52, 287);
             this.btnTypeOfMaterials.Name = "btnTypeOfMaterials";
             this.btnTypeOfMaterials.Size = new System.Drawing.Size(172, 40);
             this.btnTypeOfMaterials.TabIndex = 3;

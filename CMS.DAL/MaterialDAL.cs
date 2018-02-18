@@ -49,5 +49,9 @@ namespace CMS.DAL
             };
             return _db.ExecuteNonQuery(_conn, "cons.insert_typeofmaterial", CommandType.StoredProcedure, parameters.AsEnumerable());
         }
+        public DataTable FetchMaterial()
+        {
+            return _db.GetDataTable(_conn, "cons.fetch_material", CommandType.StoredProcedure, null);
+        }
     }
 }

@@ -53,6 +53,8 @@
             // cmBoxMaterial
             // 
             this.cmBoxMaterial.FormattingEnabled = true;
+            this.cmBoxMaterial.Items.AddRange(new object[] {
+            "--Select--"});
             this.cmBoxMaterial.Location = new System.Drawing.Point(332, 75);
             this.cmBoxMaterial.Name = "cmBoxMaterial";
             this.cmBoxMaterial.Size = new System.Drawing.Size(266, 21);
