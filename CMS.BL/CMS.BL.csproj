@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MaterialBL.cs" />
+    <Compile Include="PersonBL.cs" />
     <Compile Include="UserBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

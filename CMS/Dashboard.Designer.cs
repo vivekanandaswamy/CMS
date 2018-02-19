@@ -40,6 +40,7 @@
             this.btnActualLabourCost = new System.Windows.Forms.Button();
             this.lblDataInput = new System.Windows.Forms.Label();
             this.lblReports = new System.Windows.Forms.Label();
+            this.btnPersonsInvolved = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblDashBoard
@@ -174,11 +175,23 @@
             this.lblReports.TabIndex = 11;
             this.lblReports.Text = "REPORT SCREENS";
             // 
+            // btnPersonsInvolved
+            // 
+            this.btnPersonsInvolved.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonsInvolved.Location = new System.Drawing.Point(855, 209);
+            this.btnPersonsInvolved.Name = "btnPersonsInvolved";
+            this.btnPersonsInvolved.Size = new System.Drawing.Size(225, 37);
+            this.btnPersonsInvolved.TabIndex = 12;
+            this.btnPersonsInvolved.Text = "Details of Persons Involved";
+            this.btnPersonsInvolved.UseVisualStyleBackColor = true;
+            this.btnPersonsInvolved.Click += new System.EventHandler(this.btnPersonsInvolved_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1488, 642);
+            this.Controls.Add(this.btnPersonsInvolved);
             this.Controls.Add(this.lblReports);
             this.Controls.Add(this.lblDataInput);
             this.Controls.Add(this.btnActualLabourCost);
@@ -211,6 +224,7 @@
         private System.Windows.Forms.Button btnEstLabourCost;
         private System.Windows.Forms.Button btnActualLabourCost;
         private System.Windows.Forms.Label lblDataInput;
-        private System.Windows.Forms.Label lblReports;       
+        private System.Windows.Forms.Label lblReports;
+        private System.Windows.Forms.Button btnPersonsInvolved;
     }
 }
