@@ -54,6 +54,7 @@
             this.dbGridPersons.Name = "dbGridPersons";
             this.dbGridPersons.Size = new System.Drawing.Size(1063, 299);
             this.dbGridPersons.TabIndex = 1;
+            this.dbGridPersons.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dbGridPersons_RowHeaderMouseClick);
             // 
             // btnSearch
             // 

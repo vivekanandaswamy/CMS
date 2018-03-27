@@ -152,11 +152,6 @@ namespace CMS.Common
             return resultDataTable;
         }
         #endregion
-        //public DataAdapter GetDataAdapter(T t, string query, CommandType cmdType, IEnumerable<KeyValuePair<string, object>> parameters)
-        //{
-        //    var resultDataTable = GetDataTable(t, query, cmdType, parameters);
-        //    var dataAdapter = new SqlDataAdapter();
-        //    dataAdapter.Fill(resultDataTable);
-        //}
+       
     }
 }

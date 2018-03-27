@@ -31,5 +31,9 @@ namespace CMS.BL
         {
             return _personDAL.FetchPersonDetails();
         }
+        public DbDataReader FetchPersonDetailById(int pid)
+        {
+            return _personDAL.FetchPersonDetailById(pid);
+        }
     }
 }

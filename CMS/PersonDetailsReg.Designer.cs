@@ -210,7 +210,7 @@
             // 
             this.errProvider.ContainerControl = this;
             // 
-            // PersonDetails
+            // PersonDetailsReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -232,8 +232,9 @@
             this.Controls.Add(this.cmbPersons);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblPerDetails);
-            this.Name = "PersonDetails";
+            this.Name = "PersonDetailsReg";
             this.Text = "PersonDetails";
+            this.Load += new System.EventHandler(this.PersonDetailsReg_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

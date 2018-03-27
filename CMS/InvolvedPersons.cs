@@ -10,16 +10,20 @@ using System.Windows.Forms;
 using CMS.DAL.Models;
 using CMS.BL;
 using CMS.DAL;
+using System.Data.Common;
 
 namespace CMS
 {
     public partial class InvolvedPersons : Form
     {
         PersonBL _personBL;
+        PersonDetailsReg _personDetailsRegistration = null;
+        DbDataReader personDetails = null;
         public InvolvedPersons()
         {
             InitializeComponent();
             _personBL = new PersonBL();
+            _personDetailsRegistration = new PersonDetailsReg();
             LoadPersons();
             dbGridPersons.Columns.Clear();
         }
@@ -41,6 +45,19 @@ namespace CMS
         private void btnSearch_Click(object sender, EventArgs e)
         {
             BindPersonDetails();
+        }
+
+        private void dbGridPersons_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+           int pid = Convert.ToInt32(dbGridPersons.Rows[e.RowIndex].Cells[0].Value.ToString());
+            personDetails = FetchPersonDetailById(pid);
+            _personDetailsRegistration.InvolvedPersons = this;
+            _personDetailsRegistration.ShowDialog();
+        }
+        private DbDataReader FetchPersonDetailById(int pid)
+        {
+            var person = _personBL.FetchPersonDetailById(pid);
+            return person;
         }
     }
 }

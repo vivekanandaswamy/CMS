@@ -50,5 +50,14 @@ namespace CMS.DAL
         {
             return _db.GetDataTable(_conn, "cons.fetch_persondetails", CommandType.StoredProcedure, null);
         }
+
+        public DbDataReader FetchPersonDetailById(int pid)
+        {
+            var parameters = new List<KeyValuePair<string, object>>(){
+                new KeyValuePair<string,object>("personid",pid)
+            };
+            return _db.ExecuteReader(_conn, "cons.fetch_persondetailsById", CommandType.StoredProcedure, parameters.AsEnumerable());
+        }
+
     }
 }

@@ -17,11 +17,15 @@ namespace CMS
     {
         PersonBL _personBL;
         PersonDetails _personDetails;
+       
+
+        public InvolvedPersons InvolvedPersons { get; internal set; }
+
         public PersonDetailsReg()
         {
             InitializeComponent();
             _personBL = new PersonBL();
-            _personDetails = new PersonDetails();
+            _personDetails = new PersonDetails();            
             LoadPersons();
         }
         private void LoadPersons()
@@ -90,6 +94,11 @@ namespace CMS
                 e.Cancel = false;
                 errProvider.SetError(txtName, "");
             }
+        }
+
+        private void PersonDetailsReg_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
